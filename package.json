@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/awarrington0895/inventory-management/issues"
   },
-  "homepage": "https://github.com/awarrington0895/inventory-management#readme"
+  "homepage": "https://github.com/awarrington0895/inventory-management#readme",
+  "devDependencies": {
+    "typescript": "^4.7.4"
+  }
 }
