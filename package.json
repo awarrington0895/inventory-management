@@ -1,0 +1,19 @@
+{
+  "name": "inventory-management",
+  "version": "1.0.0",
+  "description": "Inventory management system meant to loosely reproduce the system used in Battlestate Games' Escape From Tarkov",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awarrington0895/inventory-management.git"
+  },
+  "author": "Alex Warrington",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awarrington0895/inventory-management/issues"
+  },
+  "homepage": "https://github.com/awarrington0895/inventory-management#readme"
+}
