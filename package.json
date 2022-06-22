@@ -6,6 +6,7 @@
   "packageManager": "pnpm",
   "scripts": {
     "start": "ts-node src/index.ts",
+    "lint": "eslint src/**/*.ts --fix",
     "compile": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
@@ -22,6 +23,9 @@
   "homepage": "https://github.com/awarrington0895/inventory-management#readme",
   "devDependencies": {
     "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4",
     "vitest": "^0.15.2"
