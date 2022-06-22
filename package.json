@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Inventory management system meant to loosely reproduce the system used in Battlestate Games' Escape From Tarkov",
   "main": "index.ts",
-  "packageManager": "pnpm",
   "scripts": {
     "start": "ts-node src/index.ts",
     "lint": "eslint src/**/*.ts --cache --fix",
