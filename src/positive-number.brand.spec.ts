@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { PositiveNumber } from './positive-number.brand';
 import * as E from 'fp-ts/Either';
 import { pipe } from 'fp-ts/function';
+import { isReadable } from 'stream';
 
 
 describe('PositiveNumber', () => {
