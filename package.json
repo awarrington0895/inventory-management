@@ -9,7 +9,8 @@
     "lint": "eslint src/**/*.ts",
     "compile": "tsc --noEmit",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "eslint": "^8.18.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.2",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4",
     "vitest": "^0.15.2"
@@ -33,5 +36,10 @@
   "dependencies": {
     "fp-ts": "^2.12.1",
     "io-ts": "^2.2.16"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --cache --fix"
+    ]
   }
 }
