@@ -22,6 +22,8 @@ jobs:
           cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install
+      - name: Lint typescript
+        run: pnpm run lint
       - name: Compile code
         run: pnpm run compile
       - name: Test code
