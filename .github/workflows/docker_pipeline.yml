@@ -36,5 +36,5 @@ jobs:
         with:
           context: .devcontainer
           push: true
-          tags: latest
+          tags: ${{env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           labels: ${{ steps.meta.output.labels }}
