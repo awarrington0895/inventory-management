@@ -1,8 +1,8 @@
 import * as E from 'fp-ts/Either';
 
 type Inventory = {
-    size: number;
-    items: string[];
+    readonly size: number;
+    readonly items: string[];
 }
 
 const empty = (size: number): Inventory => ({
