@@ -6,7 +6,7 @@
   "packageManager": "pnpm",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "lint": "eslint src/**/*.ts --fix",
+    "lint": "eslint src/**/*.ts",
     "compile": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest"
