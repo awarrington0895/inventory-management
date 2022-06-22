@@ -2,7 +2,7 @@ import * as E from 'fp-ts/Either';
 
 type Inventory = {
     readonly size: number;
-    readonly items: string[];
+    readonly items: readonly string[];
 }
 
 const empty = (size: number): Inventory => ({
