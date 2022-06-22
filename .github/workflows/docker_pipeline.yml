@@ -36,5 +36,5 @@ jobs:
         with:
           context: .devcontainer
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: latest
           labels: ${{ steps.meta.output.labels }}

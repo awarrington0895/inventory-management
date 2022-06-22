@@ -2,7 +2,7 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/typescript-node
 {
 	"name": "Node.js & TypeScript",
-	"image": "ghcr.io/awarrington0895/inventory-management:release-codespace-docker-image",
+	"image": "ghcr.io/awarrington0895/inventory-management:latest",
 
 
 	// Configure tool-specific properties.
