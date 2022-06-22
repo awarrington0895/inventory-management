@@ -1,11 +1,12 @@
 import * as E from 'fp-ts/Either';
+import { PositiveNumber } from './positive-number.brand';
 
 type Inventory = {
-    readonly size: number;
+    readonly size: PositiveNumber;
     readonly items: readonly string[];
 }
 
-const empty = (size: number): Inventory => ({
+const empty = (size: PositiveNumber): Inventory => ({
     size,
     items: []
 });
