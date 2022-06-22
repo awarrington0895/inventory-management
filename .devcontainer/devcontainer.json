@@ -2,15 +2,8 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.236.0/containers/typescript-node
 {
 	"name": "Node.js & TypeScript",
-	"build": {
-		"dockerfile": "Dockerfile",
-		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
-		// Append -bullseye or -buster to pin to an OS version.
-		// Use -bullseye variants on local on arm64/Apple Silicon.
-		"args": { 
-			"VARIANT": "18"
-		}
-	},
+	"image": "ghcr.io/awarrington0895/inventory-management:release-codespace-docker-image",
+
 
 	// Configure tool-specific properties.
 	"customizations": {
@@ -30,10 +23,10 @@
 	"postCreateCommand": "pnpm install",
 
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "node",
-	"features": {
-		"docker-in-docker": "latest",
-		"git": "latest",
-		"github-cli": "latest"
-	}
+	"remoteUser": "node"
+	// "features": {
+	// 	"docker-in-docker": "latest",
+	// 	"git": "latest",
+	// 	"github-cli": "latest"
+	// }
 }
