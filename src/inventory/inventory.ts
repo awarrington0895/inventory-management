@@ -1,31 +1,35 @@
 import * as E from "fp-ts/Either";
 import { PositiveNumber } from "./positive-number.brand";
+import * as Item from "./item";
 
 type Inventory = {
-  readonly size: PositiveNumber;
-  readonly items: readonly string[];
+  readonly maxSize: PositiveNumber;
+  readonly items: readonly Item.Type[];
+  readonly currentSize: PositiveNumber;
 };
 
-const empty = (size: PositiveNumber): Inventory => ({
-  size,
+const empty = (maxSize: PositiveNumber): Inventory => ({
+  maxSize,
   items: [],
+  currentSize: 0 as PositiveNumber,
 });
 
 const add = (
-  item: string,
+  item: Item.Type,
   inventory: Inventory
 ): E.Either<Error, Inventory> => {
-  if (inventory.items.length >= inventory.size) {
+  if (inventory.currentSize + item.size > inventory.maxSize) {
     return E.left(new Error("Inventory is full"));
   }
 
   return E.right({
-    size: inventory.size,
+    maxSize: inventory.maxSize,
     items: inventory.items.concat(item),
+    currentSize: (inventory.currentSize + item.size) as PositiveNumber,
   });
 };
 
-const contains = (item: string, inventory: Inventory): boolean =>
-  inventory.items.includes(item);
+const contains = (item: Item.Type, inventory: Inventory): boolean =>
+  inventory.items.some(currentItem => Item.equals(currentItem, item));
 
 export { empty, add, contains, Inventory as Type };
